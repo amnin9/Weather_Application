@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css" />
+    <script type="module" src="main.js" defer></script>
+  </head>
+  <body class="blurred">
+    <div class="container">
+      <div class="header">
+        <div class="city">
+          <img src="" class="weather-icon" data-current-icon/>
+          <span class="city-name" id="current_city"></span>
+          <button id="drop_btn" class="city-btn"> <img class="arrow_img" src="./icons/arrow-down2.png"/></button>
+          <div id="myDropdown" class="dropdown-content">
+            <input placeholder="Search.." id="searchInput" class="drop_input"/>
+            <div data-drop-section class="drop_cty" id="dropdown_container">
+              <!-- <p>Yerevan</p> -->
+            </div>
+          </div>
+        </div>
+        <div class="current">
+          <div class="top-info">
+            <div id="current_date"></div>
+            <div id="current_day" ></div>
+          </div>
+          <div class="bottom-info"> Armenia </div>
+        </div>
+        
+       
+      </div>
+
+      <section class="lists">
+        <div class="left-block" >
+          <div class="left-content">
+            <img src="" class="weather-icon" data-left-icon/>
+            <div data-left-day></div>
+            <div class="inline-deg"><div data-left-degree></div><span>&deg</span></div>
+          </div>
+        </div>
+        <div class="rigth-blocks" data-rigth-blocks>
+            <div class="block block-template" style="display: none;">
+              <div class="block-content">
+                <img src="" class="weather-icon" data-rigth-icon />
+                <div data-rigth-day></div>
+                <div class="inline-deg"><div data-rigth-temp></div><span>&deg</span></div>
+              </div>
+            </div>
+        </div>
+    </section>
+
+    <table class="hour-section" >
+      <tbody data-hour-section>
+      </tbody>
+    </table>
+
+<template  >
+
+</template>
+
+    <template id="hour-row-template">
+      <tr class="hour-row"> 
+        <td>
+          <div class="info-group">
+            <div class="label" data-row-day></div>
+            <div data-row-time></div>
+          </div>
+        </td>
+        <td>
+          <img data-row-icon class="weather-icon">
+        </td>
+        <td>
+          <div class="info-group">
+            <div class="label">Temp</div>
+          <div  data-row-temp><span>&deg</span></div>
+          </div>
+        </td>
+        <td>
+          <div class="info-group">
+            <div class="label"> uv_index</div>
+            <div data-row-uv></div>
+          </div>
+        </td>
+      </tr>
+    </template>
+
+    <template id="country-drop-template">
+        <p data-drop-country class="drop-text-style"></p>
+    </template>
+  </body>
+</html>
